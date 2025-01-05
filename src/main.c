@@ -19,7 +19,7 @@
 #include <zephyr/posix/unistd.h>
 #endif
 
-LOG_MODULE_REGISTER(app);
+LOG_MODULE_REGISTER(app, LOG_LEVEL_DBG);
 
 extern void foo(void);
 
@@ -387,6 +387,12 @@ int main(void)
 		k_sleep(K_MSEC(100));
 	}
 #endif
-
+	while (1) {
+		LOG_INF("inf");    
+		LOG_DBG("dbg");    
+		LOG_WRN("wrn");    
+		LOG_ERR("err");    
+		k_sleep(K_MSEC(1000));
+	}
 	return 0;
 }
