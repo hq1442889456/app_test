@@ -392,6 +392,8 @@ int main(void)
 		LOG_DBG("dbg");    
 		LOG_WRN("wrn");    
 		LOG_ERR("err");    
+		LOG_INF("HELLO WORLD!"); 
+		LOG_INF("welcome to zephyr!"); 
 		k_sleep(K_MSEC(1000));
 	}
 	return 0;
